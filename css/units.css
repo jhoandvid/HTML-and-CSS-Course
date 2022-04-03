@@ -1,0 +1,124 @@
+/* 
+Unidades de Medida
+1) Absolutas (Su valor no cambia, son unidades del mundo real)
+    pc,cm,mm,in,Q
+    pt(1/72in)
+    px(1/96in)
+2) Relativas (Su valor es relativo a un contexto)
+em, rem, ex, ch - al tamaño de fuente
+    em - basada en la anchura de la "m" de la fuente del elemento
+    rem - basada en la anchura de la "m" de la fuente del elemento raiz (html)
+    ex - basada en la altura de la "x" de la fuente del elemento
+    ch - basada en la anchura del "0" de la fuente del elemento
+    % - al tamaño del contenedor
+vw,vh,vmin,vmax - al tamaño del viewport 
+    vw - ancho del viewport van de 1 a 100
+    vh - alto del viewport van de 1 a 100
+    vmax - entre vw y vh toma el que tenga mayor valor
+    vmin - entre vw y vh toma el que tenga menor valor
+*/
+
+html {
+  box-sizing: border-box;
+  font-size: 20px;
+  font-size: 16px;
+  background-color: black;
+}
+body {
+  background-color: antiquewhite;
+  /*  margin: 0; */
+}
+*,
+*::after,
+::before {
+  box-sizing: inherit;
+}
+
+.pixels {
+  background-color: #63eaea;
+  width: 500px;
+  height: 400px;
+  padding: 20px;
+  font-size: 16px;
+  border: thick solid rebeccapurple;
+}
+
+.ems {
+  background-color: #63eaea;
+  padding: 1em 0.5em;
+  font-size: 1.5em;
+  border: thick solid rebeccapurple;
+}
+
+.em-child {
+  background-color: salmon;
+  border: thick solid beige;
+  margin: 0.5em;
+  padding: 1em;
+  font-size: 2em;
+}
+
+.rems {
+  background-color: #63eaea;
+  padding: 1em 0.5em;
+  font-size: 1.5em;
+  border: thick solid rebeccapurple;
+}
+
+.rem-child {
+  background-color: salmon;
+  border: thick solid beige;
+  margin: 0.5rem;
+  padding: 1rem;
+  font-size: 2rem;
+}
+.exs {
+  background-color: #63eaea;
+  font-size: 24px;
+  padding: 1ex 0.5ex;
+  border: thick solid rebeccapurple;
+}
+
+.ex-child {
+  background-color: salmon;
+  border: thick solid beige;
+  margin: 0.5ex;
+  padding: 1ex;
+  font-size: 2ex;
+}
+
+.chs {
+  background-color: cadetblue;
+  width: 10ch;
+}
+
+.percentages {
+  background-color: darkkhaki;
+  padding: 5%;
+  margin: 20% 10%;
+  width: 80%;
+  font-size: 100%;
+  /* La altura esta limitada por el contenido */
+}
+
+.heigth-parent {
+  background-color: brown;
+  width: 500px;
+  height: 500px;
+}
+
+.heigth-child {
+  background-color: coral;
+  width: 50%;
+  height: 100%;
+}
+
+.viewport {
+  background-color: darkcyan;
+  width: 50vw;
+  /* La etiqueta (body) tiene margenes por defecto por defecto y las barras de scroll del navegador tambien forman parte del viewport*/
+  width: 100%; /* Es recomendable utilizar width con % */
+  width: 100vw;
+  height: 50vh;
+  height: 100vh;
+}
