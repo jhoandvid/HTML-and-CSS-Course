@@ -121,4 +121,14 @@ body {
   width: 100vw;
   height: 50vh;
   height: 100vh;
+  font-size: 5vw;
+  padding: 2vh 2vw;
+}
+
+.vmin,
+.vmax {
+  background-color: darksalmon;
+  border: thick solid cyan;
+  width: 50vmax;
+  height: 50vmin;
 }
